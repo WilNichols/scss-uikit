@@ -1,0 +1,35 @@
+@import "bourbon/bourbon";
+
+
+/* All */
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  @include animation(none !important); 
+  }
+  
+label {
+  cursor: pointer;
+  color: #8c939c;
+  font-family: Proxima Nova;
+  span {
+    padding-left: .25rem;
+  }
+}
+
+.select_one {
+  margin-left: 1rem;
+}
+
+/* Buttons */
+@import "_frag-ui-button.scss";
+/* Select */
+@import "_frag-ui-select.scss";
+/* Switches */
+@import "_frag-ui-switch.scss";
+/* Checkboxes */
+@import "_frag-ui-checkbox.scss";
+/* Radio Buttons */
+@import "_frag-ui-radio.scss";
+/* Support Tooltip */
+@import "_frag-ui-pulse+tooltip.scss";

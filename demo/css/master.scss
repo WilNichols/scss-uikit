@@ -1,0 +1,133 @@
+@import "bourbon/bourbon";
+@import "common";
+@import "grid";
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  @include box-sizing(border-box);
+}
+
+html {
+  font-size: $rem;
+}
+
+body {
+
+  margin: 0;
+  font-family: $fonts;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: $slate;
+  background: $background;
+  vertical-align: middle;
+  text-align: left;
+}
+
+section{
+  line-height:32px;
+  vertical-align: middle;
+  padding: 1.25rem;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.12);
+  background: #fff;
+  text-align: left;
+  display: inline-block;
+
+  width: 100%;
+  min-width: 290px;
+  min-height: 330px;
+  }
+  
+a {
+  text-decoration: none;
+  color: $slate;
+  &:hover {
+    color: $blue;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight:800;
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  @media only screen and (max-width: $DE-breakpoint-medium) {
+    font-size: calc(.5 * 4rem);
+  }
+  @media only screen and (max-width: $DE-breakpoint-iphone6) {
+    font-size: calc(.4 * 4rem);
+  }
+  @media only screen and (max-width: $DE-breakpoint-iphone5) {
+    font-size: calc(.35 * 4rem);
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  display: block;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 1rem 0;
+  display: block;
+  width: 100%;
+  text-align: center
+}
+
+h4 {
+/*font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 2rem;
+  margin: 1rem 0;*/
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 800;
+  margin: 1rem 0;
+  display: block;
+  text-align: left;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid $slate;
+  padding: 0 0 1rem 0;
+  margin: 1.25rem 0;
+}
+
+h6 {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  margin: 3rem 0 1rem 0;
+  color: $slatetext;
+}
+
+.darkbg {
+  padding: 1rem;
+  background: #f5f6f7;
+  text-align: center;
+  margin: 1rem 0
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: block;
+  overflow: hidden !important;
+  padding: 0 0 0 1.25rem
+}

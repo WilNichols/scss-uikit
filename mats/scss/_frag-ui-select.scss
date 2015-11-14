@@ -1,0 +1,117 @@
+@import "bourbon/bourbon";
+@import "_palette.scss";
+
+span.overflow{
+  outline: 0;
+  background: #fff;
+  font-size: 12px;
+	font-family: "proxima-nova", Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: #8c939c;
+	font-weight: 600;
+  border: 0;
+	height: 20px;
+	display: inline-block;
+	width: auto;
+	border-radius: 1px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	padding: 1px !important;
+  text-align: left;
+  cursor: pointer;
+  margin: 1px 8px 0 8px;
+  padding-left: 0;
+  text-indent: none;
+  @include user-select(none);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  z-index: 0;
+  &:before{
+    content:'';
+    height: 22px;
+    width: 18px;
+    position: absolute;
+    top: -1px;
+    right: 0;
+    background: $blue;
+    display: inline-block;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin: 0 -1px 0 0;
+    z-index: 1;
+  }
+  &:after{
+    content:url("../img/buttons-caret.svg");
+    padding: 0 0 0 5px;
+    height: 20px;
+    width: 11px;
+    line-height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 1px;
+    z-index: 2;
+    margin: 0 -1px 0 0;
+  }
+  &:hover {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.125), 0 0 0 1px rgba(0,0,0,0.1);
+    &:before {
+      background: saturate($blue, 10);
+    }
+  }
+  .titlebg {
+    background: transparent;
+    border-radius: 2px;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    line-height: 18px;
+    display: block;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.1);
+  }
+  &:active { 
+    &:before{
+      box-shadow: none;
+      background: darken($blue, 10);
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.125), inset 0 0 0 1px rgba(0,0,0,0.1);
+    }
+    .titlebg {
+      height: 22px;
+      margin: -1px 0 0 -1px;
+      background: darken(white, 5);
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.125), inset 0 0 0 1px rgba(0,0,0,0.1);
+    }
+  }
+  
+  select {
+    font-size: 12px;
+    font-family: "proxima-nova", Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #8c939c;
+    font-weight: 600;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    line-height: 22px;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    @include user-select(none);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    z-index: 100;
+    padding: 0 25px 0 7px;
+    margin-top: -1px;
+    &:active, &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+}
